@@ -12,7 +12,8 @@ chatbot Gen AI ở đây đơn giản là chatbot có thể hiểu và trả l�
 # Main course - Kinh nghiệm cá nhân
 Theo quan điểm cá nhân thì mình sẽ chia quá trình phát triển một chatbot Gen AI thành 3 giai đoạn chính. Mỗi giai đoạn lại có những lưu ý riêng. Tổng quan mọi người xem hình dưới đây nhé:
 
-![][image1]
+![image](https://github.com/user-attachments/assets/f35f0924-5891-4d7f-bd16-97955332a867)
+
 
 
 ## Phase Chuẩn bị - Chuẩn bị những gì?
