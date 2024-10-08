@@ -12,19 +12,19 @@ chatbot Gen AI ở đây đơn giản là chatbot có thể hiểu và trả l�
 # Main course - Kinh nghiệm cá nhân
 Theo quan điểm cá nhân thì mình sẽ chia quá trình phát triển một chatbot Gen AI thành 3 giai đoạn chính. Mỗi giai đoạn lại có những lưu ý riêng. Tổng quan mọi người xem hình dưới đây nhé:
 
-![image](https://github.com/user-attachments/assets/f35f0924-5891-4d7f-bd16-97955332a867)
+![image](https://github.com/user-attachments/assets/7640997e-edec-4150-9b6c-6db6c2d77686)
 
 
 
-## Phase Chuẩn bị - Chuẩn bị những gì?
+## Preparation Phase - Chuẩn bị những gì?
 
-### 1. Dữ liệu
+### 1. Data - Dữ liệu sạch là số 1
 Mình tin rằng mỗi bên sẽ có thể có một tool chunking có cơ chế hoạt động khác nhau và việc rà soát kĩ càng để đảm bảo tài liệu văn bản của mọi người đúng với template và format phù hợp với tool đó là vô cùng quan trọng.
 Ví dụ như bên mình, sau khi document được đẩy lên hệ thống thì bên mình sẽ cắt doc đó ra lần lượt theo 
 ```
 <Title>-<Heading 1>-<Heading n>-<content>
 ``` 
-Do đó, nếu document không được đánh title, thì nôị dung doc phía dưới sẽ hoàn toàn bị cắt đi và không được lưu trữ. Hoặc tool bên mình với những heading mà có 1 dòng bị cách thì content sau heading đó cũng bị cắt đi. Mình biết là văn bản nội bộ quy định quy trình thường rất dài, có những văn bản có thể lên tới mấy chục trang. Đau đầu hơn là có những dòng nhìn thì tưởng là Heading, nhưng thực ra là normal text được format cho giống với Heading 🙁nên nhìn chung công việc xử lý dữ liệu đòi hỏi sự kiên nhẫn và tỉ mẩn rất cao. 
+Do đó, nếu document không được đánh title, thì nội dung doc phía dưới sẽ hoàn toàn bị cắt đi và không được lưu trữ. Hoặc tool bên mình với những heading mà có 1 dòng bị cách thì content sau heading đó cũng bị cắt đi. Mình biết là văn bản nội bộ quy định quy trình thường rất dài, có những văn bản có thể lên tới mấy chục trang. Đau đầu hơn là có những dòng nhìn thì tưởng là Heading, nhưng thực ra là normal text được format cho giống với Heading 🙁nên nhìn chung công việc xử lý dữ liệu đòi hỏi sự kiên nhẫn và tỉ mẩn rất cao. 
 Bài học của mình là hãy check kĩ menu document outline bên cạnh xem đã đầy đủ các nội dung Heading như trong văn bản chưa. 
 Đối với dữ liệu dạng excel, hãy cực kì cẩn thận với các sheet ẩn. Bộ phận nghiệp vụ trong quá trình xây dữ liệu có thể ẩn sheet này sheet kia và sau đó quên không hiển thị lại. Và những sheet ẩn này hoàn toàn có thể là những sheet sai format, làm ảnh hưởng tới bộ dữ liệu sạch sẽ cho chatbot. 
 Mọi người cũng cần loại bỏ các thông tin thừa trong các file dữ liệu trước khi thực hiện lưu trữ. Ví dụ, các thông tin như STT, PIC của câu hỏi,.. như trường hợp bên mình thì hoàn toàn là những nội dung không phục vụ cho việc trả lời câu hỏi của end user mà chỉ để sử dụng để bên nghiệp vụ dễ dàng phân chia nhiệm vụ. Những cột thông tin thừa đó cần được loại bỏ trước khi đưa vào lưu trữ.
@@ -36,3 +36,17 @@ Correct Answer: Có x cách để mở thẻ tín dụng. Cách 1:... Cách 2:..
 Incorrect Answer: Dạ thưa Anh Chị, Em xin phép được trả lời như sau ạ. Hiện ngân hàng chúng em hỗ trợ hai cách để mở thẻ tín dụng. Cách 1: Anh Chị … Cách 2: Anh Chị …
 ```
 **→ Văn phong của Chatbot hoàn toàn có thể được hướng dẫn bởi system prompt thay vì là để luôn thành câu trả lời trong file QnA. Việc để nhiều từ ngữ, câu văn rườm rà có thể ảnh hưởng tới mức độ chính xác của việc truy xuất ra dữ liệu đúng để chatbot tạo ra câu trả lời.** 
+
+### Human - Con người 
+Ở phần này, mình sẽ chia Con người thành hai team, team IT (nhóm chịu trách nhiệm chính cho việc phát triển prompt, phát triển tính năng, đề xuất giải pháp, tối ưu luồng xử lý dữ liệu,...) và team BU (hay là bộ phận nghiệp vụ, chịu trách nhiệm đưa ra đề bài, là end user hoặc là team gần gũi, thấu hiểu end user nhất). 
+Theo mình thì để 1 dự án Gen AI có thể hoàn thành nhanh và hiệu quả thì cần chất lượng và số lượng ở cả hai team.
+
+**Team IT** 
+
+- Số lượng: Theo mình thì 1 core team triển khai 1 use case Gen AI, nếu không phải là build platform, thì sẽ không cần số lượng quá lớn. Core team nên chỉ khoảng từ 3-5 người (full-time), tuỳ vào khối lượng dữ liệu cần xử lý. Một team ít hơn 3 thì khối lượng công việc của người đó sẽ khá nhiều, thường xuyên phải multi-task, cần skill quá đa dạng, dẫn tới khó tuyển dụng. Một team trên 5 thì theo mình sẽ khó quản lý chất lượng đầu ra, dễ phân tán nguồn lực và hơi có sức ì do ỉ lại có nhiều người backup.
+- Chất lượng: Các dự án chatbot Gen AI khối lượng công việc lớn thường tới từ việc xử lý dữ liệu, prompting và testing. Các công việc này đều không cần một role quá cụ thể, nhưng mọi người sẽ cần là một team rất active, chủ động và có tinh thần làm việc nhóm tốt để phối hợp và chia việc cho nhau. Sẽ có lúc, khối lượng dữ liệu cần xử lý, review là rất nhiều, nên mọi người sẽ cần phân chia và sync-up với nhau hàng ngày. Team cũng cần có thói quen thường xuyên nghiên cứu, cập nhật về các xu hướng mới về mặt công nghệ để có thể educate team BU và đề xuất giải pháp phù hợp hay tối ưu chatbot sau này.
+
+**Team BU**
+
+- Số lượng: Ngược lại với team IT số lượng không cần nhiều thì team BU sẽ cần dedicate 1 nguồn lực tương đối lớn, tỉ lệ thuận với lượng dữ liệu, văn bản mà BU muốn chatbot có thể trả lời được. BU sẽ là team chịu trách nhiệm chuẩn hoá lại dữ liệu theo format, template mà team IT đã định nghĩa, và đồng thời, cũng là team sẽ phải tổng hợp, thống kê các nghiệp vụ, dữ liệu cần đưa cho chatbot. Sau đó, team cũng cần dồn nguồn lực để UAT với lượng câu hỏi đủ lớn, đa dạng và có tracking lại các issue của chatbot để team IT có thể cải thiện sau đó. Đây đều là những công việc tỉ mẩn, có thể tốn thời gian nên sẽ cần một lực lượng lớn vào một số giai đoạn như Chuẩn bị dữ liệu và Testing.
+- Chất lượng: 
