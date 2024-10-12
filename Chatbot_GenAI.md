@@ -49,4 +49,15 @@ Theo mình thì để 1 dự án Gen AI có thể hoàn thành nhanh và hiệu 
 **Team BU**
 
 - Số lượng: Ngược lại với team IT số lượng không cần nhiều thì team BU sẽ cần dedicate 1 nguồn lực tương đối lớn, tỉ lệ thuận với lượng dữ liệu, văn bản mà BU muốn chatbot có thể trả lời được. BU sẽ là team chịu trách nhiệm chuẩn hoá lại dữ liệu theo format, template mà team IT đã định nghĩa, và đồng thời, cũng là team sẽ phải tổng hợp, thống kê các nghiệp vụ, dữ liệu cần đưa cho chatbot. Sau đó, team cũng cần dồn nguồn lực để UAT với lượng câu hỏi đủ lớn, đa dạng và có tracking lại các issue của chatbot để team IT có thể cải thiện sau đó. Đây đều là những công việc tỉ mẩn, có thể tốn thời gian nên sẽ cần một lực lượng lớn vào một số giai đoạn như Chuẩn bị dữ liệu và Testing.
-- Chất lượng: 
+- Chất lượng: BU là người đưa ra yêu cầu chính cho sản phẩm, do đó một team BU chất lượng cần 2 yếu tố chính, đó là
+  1. Thấu hiểu end-user (ở đây BU có thể là end-user hoặc là khách hàng ngoài của ngân hàng)
+  2. Hiểu về sự khác biệt giữa Gen AI và các điểm hạn chế của Gen AI
+Đối với yếu tố thứ 2, Team IT sẽ là bên educate cho BU. Nếu BU không hiểu về sự khác biệt và các điểm hạn chế, khả năng cao sẽ đưa ra những yêu cầu không phù hợp cũng như những chỉ số đo lường vô lí. Ví dụ, BU bên mình từng có các yêu cầu hay thắc mắc không hợp lý như sau:
+```
+- Chị cho list keyword rồi bot của em bắt keyword để phản hồi ra các kịch bản tương ứng được không em?
+- Sao bot của em mỗi lần lại trả lời 1 kiểu thế? Thế làm sao để chị kiểm soát được độ chính xác của nó được?
+- Yêu cầu bot trả lời đủ ra hết thông tin dù câu hỏi chung chung.
+...
+``` 
+
+###
