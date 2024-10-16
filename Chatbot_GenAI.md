@@ -60,4 +60,19 @@ Theo mình thì để 1 dự án Gen AI có thể hoàn thành nhanh và hiệu 
 ...
 ``` 
 
-###
+### Plan and Process - Phối hợp và Tuân thủ
+Để triển khai nhanh thì không chỉ cần con người mà mình thấy quy trình và kế hoạch cũng vô cùng quan trọng. Team của mọi người dù có giỏi nhưng lại lộn xộn, thích trễ deadline thì mình tin là không chỉ triển khai use case Gen AI mà use case nào cũng không ổn. Theo kinh nghiệm cá nhân thì mình thấy các thành phần sau là bắt buộc và vô cùng quan trọng cho dự án ngay từ bước đầu triển khai.
+
+**Kế hoạch Master plan**
+Một Master plan tốt sẽ là kim chỉ nam và cũng là quy định yêu cầu các thành viên từ 2 team phải tham gia. Master plan không phải là một plan chung chung, mà phải là một plan vô cùng chi tiết, cụ thể từng phase, task list, PIC, start date, end date, status và note issue. Master plan này sẽ được cả team BU và IT review và đồng thuận, coi như là một bản cam kết sẽ tuân thủ timeline và các scope công việc nêu trong plan. 
+Để đảm bảo tuân thủ master plan, hai team cần meeting weekly catch up tiến độ, hay thậm chí catch up với tần suất 2 lần 1 tuần nếu là 1 dự án thực sự gấp hay có độ khó cao, khối lượng công việc nhiều (đây là catch up giữa BU và IT còn nội bộ mỗi team thì chắc chắn nên có daily catch up rùi). 
+
+**Các document hướng dẫn**
+
+
+**Thống kê dữ liệu**
+Dữ liệu là vô cùng quan trọng, là xương sống của chatbot nên chắc chắn mọi người sẽ cần kiểm soát cấu phần này. Và cách tốt nhất hiện tại theo mình là có một sheet Thống kê dữ liệu. Sheet này dù có thể mất thời gian nhưng sẽ giúp mọi người nắm được:
+
+- Bot đã nhận được những tri thức gì hay Scope tri thức mà bot có thể trả lời là gì. Từ đó, phía BU có thể có những kì vọng đúng đẵn khi xây dựng bộ câu hỏi UAT. Ngoài ra thì việc này cũng phục vụ tốt cho quá trình report, marketing về bot sau này, kiểu bot nắm được n văn bản, x nghiệp vụ, y bộ FAQ,... nghe cũng đã và uy tín hen :)
+- Nếu Bot trả lời sai thì là do đâu. Bot không thể lúc nào cũng trả lời đúng 100%, và đối với những câu sai, thì nguyên nhân là do đâu? Là do dữ liệu truy vấn ra không đúng, không đủ để trả lời câu hỏi của người dùng, hay là do bản thân dữ liệu đưa cho bot đã sai? Việc trace lại nguyên nhân của câu trả lời sai sẽ nhanh hơn rất nhiều, nếu có bản thống kê dữ liệu này.
+- Dữ liệu nào đã và cần được update và thay đổi. 
