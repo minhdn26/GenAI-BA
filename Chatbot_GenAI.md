@@ -68,11 +68,20 @@ Một Master plan tốt sẽ là kim chỉ nam và cũng là quy định yêu c�
 Để đảm bảo tuân thủ master plan, hai team cần meeting weekly catch up tiến độ, hay thậm chí catch up với tần suất 2 lần 1 tuần nếu là 1 dự án thực sự gấp hay có độ khó cao, khối lượng công việc nhiều (đây là catch up giữa BU và IT còn nội bộ mỗi team thì chắc chắn nên có daily catch up rùi). 
 
 **Các document hướng dẫn**
-
+Một quy trình chuẩn bị dữ liệu chuẩn cho Bot theo mình sẽ là:
+```
+B1: BU chuẩn bị dữ liệu theo yêu cầu và scope đã thống nhất
+B2: IT review dữ liệu
+B3: IT đẩy dữ liệu vào knowledge base của Bot
+B4: IT test sơ bộ
+B5: BU UAT
+```
+ 
+Và để các bước trên suôn sẻ, Team IT sẽ cần document hoá rõ ràng hướng dẫn, template tài liệu như nào để đưa vào cho Bot học. Việc có đầy đủ guideline chuẩn bị, template dữ liệu sẽ giúp BU - bên chịu trách nhiệm chính cho việc chuẩn bị knowledge base cho Bot có thể đẩy nhanh tốc độ chuẩn bị và phối hợp tốt hơn. Việc này cũng giúp team IT "nhàn" hơn trong khâu review dữ liệu và đẩy dữ liệu cho Bot học sau đó. 
 
 **Thống kê dữ liệu**
 Dữ liệu là vô cùng quan trọng, là xương sống của chatbot nên chắc chắn mọi người sẽ cần kiểm soát cấu phần này. Và cách tốt nhất hiện tại theo mình là có một sheet Thống kê dữ liệu. Sheet này dù có thể mất thời gian nhưng sẽ giúp mọi người nắm được:
 
 - Bot đã nhận được những tri thức gì hay Scope tri thức mà bot có thể trả lời là gì. Từ đó, phía BU có thể có những kì vọng đúng đẵn khi xây dựng bộ câu hỏi UAT. Ngoài ra thì việc này cũng phục vụ tốt cho quá trình report, marketing về bot sau này, kiểu bot nắm được n văn bản, x nghiệp vụ, y bộ FAQ,... nghe cũng đã và uy tín hen :)
 - Nếu Bot trả lời sai thì là do đâu. Bot không thể lúc nào cũng trả lời đúng 100%, và đối với những câu sai, thì nguyên nhân là do đâu? Là do dữ liệu truy vấn ra không đúng, không đủ để trả lời câu hỏi của người dùng, hay là do bản thân dữ liệu đưa cho bot đã sai? Việc trace lại nguyên nhân của câu trả lời sai sẽ nhanh hơn rất nhiều, nếu có bản thống kê dữ liệu này.
-- Dữ liệu nào đã và cần được update và thay đổi. 
+ 
