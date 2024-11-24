@@ -15,5 +15,13 @@ Các LLMs sẽ được phân thành hai nhóm, **Strong** và **Weak**, cụ th
 
 - **Strong**: Các closed-source model đắt tiền và thông minh nhất hiện nay như: GPT 4o, Claude 3.5 Sonnet, Mistral Large 24.11, Pixtral Large,...
 - **Weak**: Các closed-source model nhỏ gọn, hoặc open-source model như: GPT 4o-mini, Claude 3.5 Haiku, Mistral Small 24.09, Pixtral 12B,...
+# Luồng hoạt động
+1. Ngừoi dùng nhập query
+2. Router phân loại tác vụ của user query
+3. Router chấm điểm mức độ phức tạp của user query
+4. Router quyết định model phù hợp
+5. Router chuyển quyết định model và user query sang MOS
+6. MOS đẩy model config, prompt
+
 
  
