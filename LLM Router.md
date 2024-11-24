@@ -6,7 +6,7 @@ Xây dựng luồng tự động lựa chọn được LLM phù hợp nhất đ�
 - Giảm phụ thuộc và dễ mở rộng: Bên cung cấp model có thể giới hạn request trong 1 khoảng thời gian, do đó cần có cơ chế phân bổ request tới các model khác nhau để vẫn đảm bảo performance khi số lượng request tăng.
 # Phạm vi
 ## Luồng routing cần đảm bảo:
-- Tích hợp được với nhiều mô hình LLM
+- Tích hợp được với nhiều mô hình LLM trong hệ thống sẵn có
 - Phân loại query đầu vào và lựa chọn model tối ưu nhất về tỉ lệ cost và accuracy.
 - Báo cáo tracking chi phí và các LLM đã sử dụng cho từng nhóm user.
 - Dễ dàng thay đổi cơ chế lưạ chọn model khi yêu cầu business thay đổi.
@@ -15,4 +15,5 @@ Các LLMs sẽ được phân thành hai nhóm, **Strong** và **Weak**, cụ th
 
 - **Strong**: Các closed-source model đắt tiền và thông minh nhất hiện nay như: GPT 4o, Claude 3.5 Sonnet, Mistral Large 24.11, Pixtral Large,...
 - **Weak**: Các closed-source model nhỏ gọn, hoặc open-source model như: GPT 4o-mini, Claude 3.5 Haiku, Mistral Small 24.09, Pixtral 12B,...
+
  
