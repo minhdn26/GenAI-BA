@@ -22,6 +22,10 @@ Các LLMs sẽ được phân thành hai nhóm, **Strong** và **Weak**, cụ th
 4. Router quyết định model phù hợp
 5. Router chuyển quyết định model và user query sang MOS
 6. MOS đẩy model config, prompt
+Làm sao để tối ưu giá và độ chính xác và cả response time.
+- Ưu tiên chọn Open AI 
+Cơ chế lưu trữ các query có complexity score tương đồng nhau sẽ được lựa chọn model tương tự --> giảm thời gian chờ đợi chạy full luồng phân loại.
+
 
 
  
